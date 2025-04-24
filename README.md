@@ -4,9 +4,9 @@
 
 ## Table of Contents
 - [Introduction](#Introduction)
-- [Dataset Overview](#Dataset_Overview)
-- [Project Objective](#Project_Objective)
-- [Data Cleaning](#Data_Cleaning)
+- [Dataset Overview](#Dataset-Overview)
+- [Project Objective](#Project-Objective)
+- [Data Cleaning](#Data-Cleaning)
 
 
 ### Introduction
