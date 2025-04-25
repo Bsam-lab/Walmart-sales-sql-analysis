@@ -13,7 +13,7 @@
 The Walmart Sales business relies on data to gain deeper understanding of the business and identify opportunities to optimize strategies, improve customer satisfaction, and increase revenue of the business. SQL was used to query and analyze the data, as well as answer specific questions about the dataset to uncover valuable insights that can inform business decisions and drive growth. 
 
 ### Dataset Overview
-The dataset used in the analysis consisits of 1200 rows and 13 columns. 
+The dataset used in the analysis consisits of 1000 rows and 17 columns and 1 created column. 
 ![Screenshot 2025-04-24 141245](https://github.com/user-attachments/assets/de15cf32-1ab5-4951-a09d-d56266563ffc)
 
 ### Project Objective
@@ -55,7 +55,9 @@ Customer
 9.	Which day of the week has the best avg ratings?
 10.	Which day of the week has the best average ratings per branch?
 
-### Data Cleaning
+
+
+### Data Cleaning ![data cleaning icon](https://github.com/user-attachments/assets/79b92730-5b5c-490f-9c24-df5a28fafd01)
 1. Renaming of Columns
 I started by renaming my column header name from Invoice ID to Invoice_id,Customer type to Customer_type,Product line to Product_line,Unit price to Unit_price,Tax 5% to Tax,gross margin percentage to Gross_margin_percentage,gross income to Gross_income.
 ```sql
@@ -80,3 +82,31 @@ alter table walmartsalesdata add column weekday varchar(50);
 select date,dayname(date) from walmartsalesdata;
 update walmartsalesdata set weekday = dayname(date);
 ```
+### Data Exploration and Insight
+City  
+1. There are 3 unique cities, each assigned a branch (A, B, C).
+2. City B (and its corresponding branch) generated the highest revenue.
+
+Product performance
+1. The dataset contains 6 unique product lines.
+2. "Food and Beverages" was the top-selling product line by quantity.
+3. The product line that contributed the most VAT was "Health and Beauty".
+
+Custormer Insight
+1. Customers were categorized as Members or Normal.
+2. Member customers generated the most revenue.
+3. Male customers were slightly more frequent across all branches.
+4. The highest number of ratings was given during the Evening.
+
+Ratings & Feedback
+1. Friday was the day with the highest average ratings.
+2. The "Electronic Accessories" product line received the highest average rating.   
+3. Ratings were more frequently given in the Evening, across all branches.
+### Recommendation
+1. Cities like City B with the highest revenue should receive targeted campaigns and customer retention programs.
+2. Ensure optimal stock levels for Food and Beverages and Electronic Accessories across branches.
+3. Since Ewallet is the most used payment method, consider offering promotions or discounts for digital wallet users.
+4. Consider staff shifts or promotions in the Morning and Afternoon slots where ratings are lower.
+5. Since Members bring in more revenue, incentivizing normal customers to join loyalty programs could boost sales.
+### Conclusion
+This project successfully demonstrates the power of SQL in analyzing real-world retail data. Through structured querying and data transformation, we uncovered insights into customer behavior, product popularity, and sales performance. These insights can guide data-backed strategies to boost revenue, enhance customer satisfaction, and streamline business operations
