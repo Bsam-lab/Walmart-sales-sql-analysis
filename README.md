@@ -57,10 +57,26 @@ Customer
 
 ### Data Cleaning
 1. Renaming of Columns
-I started by renaming my column header name from Invoice ID to Invoice_id 
+I started by renaming my column header name from Invoice ID to Invoice_id,Customer type to Customer_type,Product line to Product_line,Unit price to Unit_price,Tax 5% to Tax,gross margin percentage to Gross_margin_percentage,gross income to Gross_income.
 ```sql
 alter table walmartsalesdata rename column `Invoice ID` to Invoice_id;
+alter table walmartsalesdata rename column `Customer type` to Customer_type;
+alter table walmartsalesdata rename column `Product line` to Product_line;
+alter table walmartsalesdata rename column `Unit price` to Unit_price;
+alter table walmartsalesdata rename column `Tax 5%` to Tax;
+alter table walmartsalesdata rename column `gross margin percentage` to Gross_margin_percentage;
+alter table walmartsalesdata rename column `gross income` to Gross_income;
 ```
-
-
-
+2. Change date format
+```sql
+SET SQL_SAFE_UPDATES = 0;
+update walmartsalesdata set date= replace(date,'-','/');
+alter table walmartsalesdata modify column date date;
+```
+3. add column weekday
+```sql
+SET SQL_SAFE_UPDATES = 0;
+alter table walmartsalesdata add column weekday varchar(50);
+select date,dayname(date) from walmartsalesdata;
+update walmartsalesdata set weekday = dayname(date);
+```
