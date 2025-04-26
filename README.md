@@ -16,7 +16,8 @@
 The Walmart Sales business relies on data to gain deeper understanding of the business and identify opportunities to optimize strategies, improve customer satisfaction, and increase revenue of the business. SQL was used to query and analyze the data, as well as answer specific questions about the dataset to uncover valuable insights that can inform business decisions and drive growth. 
 
 ### Dataset Overview
-The dataset used in the analysis consisits of 1000 rows and 17 columns and 1 created column, here is a sample of the dataset
+The dataset used in the analysis consisits of 1000 rows and 17 columns and 1 created column, here is a sample of the dataset.
+
 ![Screenshot 2025-04-24 141245](https://github.com/user-attachments/assets/de15cf32-1ab5-4951-a09d-d56266563ffc)
 
 ### Project Objective
