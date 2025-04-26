@@ -61,7 +61,7 @@ Customer
 
 
 
-### Data Cleaning ![data cleaning icon](https://github.com/user-attachments/assets/79b92730-5b5c-490f-9c24-df5a28fafd01)
+### Data Cleaning
 1. Renaming of Columns
 I started by renaming my column header name from Invoice ID to Invoice_id,Customer type to Customer_type,Product line to Product_line,Unit price to Unit_price,Tax 5% to Tax,gross margin percentage to Gross_margin_percentage,gross income to Gross_income.
 ```sql
